@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testando OnClick</title>
+    <style>
+        .box{
+            color:red;
+        }
+
+        .teste_checkbox{
+            margin: 5px;
+            padding: 5px;
+        }   
+
+        p{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        text Hello!
+    </div>
+
+    <button onclick="mudaCor('blue')">Azul</button>
+    <button onclick="mudaCor('red')">Vermelho</button>
+    <button onclick="mudaCor('green')">Verde</button>
+    <br>
+
+    <p name="msg" id="msg">Elyel testando!</p>
+    <div class="teste_checkbox">
+        <label for="teste">Testando checkbox</label>
+        <input type="checkbox" name="teste" id="teste" onclick="mensagem()"/>
+    </div>
+
+    <script>
+        function mudaCor(color){
+            document.querySelector('.box').style.color = color;
+            console.log("Mudou a cor!");
+        }
+
+        function mensagem(){
+            var mensagem = document.getElementsById('teste');
+            var text = document.getElementById('msg');
+            if(mensagem.checked == true){
+                text.display = "block";
+            }else{
+                text.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

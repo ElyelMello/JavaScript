@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando todos os checkboxes</title>
+</head>
+<body>
+    
+    <div>
+        <input type="checkbox" class="check">Checkbox 1</input>
+        <label for="checkbox"></label>
+    </div>
+
+    <div>
+        <input type="checkbox" class="check">Checkbox 2</input>
+        <label for="checkbox"></label>
+    </div>
+
+    <div>
+        <input type="checkbox" class="check">Checkbox 3</input>
+        <label for="checkbox"></label>
+    </div>
+
+    <div>
+        <input type="checkbox" class="check">Checkbox 4</input>
+        <label for="checkbox"></label>
+    </div>
+
+    <div>
+        <input type="checkbox" class="check">Checkbox 5</input>
+        <label for="checkbox"></label>
+    </div>
+
+    <button id="btnCheck">Selecionar tudo</button>
+
+
+<script>
+    
+    let checkbox = document.querySelectorAll('.check');
+    let btnCheck = document.querySelector('#btnCheck');
+    let array = [];
+
+    btnCheck.addEventListener('click', () =>{
+        console.log(checkbox);
+
+        for(let current of checkbox){
+            current.checked = !current.checked;
+
+
+        }
+
+        alert(current);
+
+    })
+</script>
+</body>
+</html>
